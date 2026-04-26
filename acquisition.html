@@ -28,14 +28,12 @@
 html{scroll-behavior:smooth}
 body{font-family:var(--body);background:var(--bg);color:var(--text);overflow-x:hidden;font-size:16px;line-height:1.6}
 
-/* GRID BG */
 body::before{
   content:'';position:fixed;inset:0;
   background-image:linear-gradient(rgba(0,245,196,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,245,196,0.025) 1px,transparent 1px);
   background-size:50px 50px;pointer-events:none;z-index:0
 }
 
-/* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
   display:flex;align-items:center;justify-content:space-between;
@@ -49,7 +47,6 @@ nav{
 .nav-back{font-size:0.82rem;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color 0.2s}
 .nav-back:hover{color:var(--accent)}
 
-/* HERO */
 .hero{
   min-height:100vh;
   display:flex;flex-direction:column;
@@ -112,7 +109,6 @@ nav{
   animation:fadeUp 0.5s 0.2s ease both;
 }
 
-/* ILLUMINATING BUTTONS */
 .hero-btns{
   display:flex;gap:1rem;flex-wrap:wrap;
   justify-content:center;
@@ -155,7 +151,7 @@ nav{
 }
 .btn-outline:hover{border-color:var(--accent);color:var(--accent);background:rgba(0,245,196,0.05)}
 
-/* PRICE BAR */
+/* PRICE BAR — updated: no domain prices, just sponsorship + response */
 .price-bar{
   display:flex;gap:0;
   margin-top:3.5rem;
@@ -179,13 +175,12 @@ nav{
   text-transform:uppercase;margin-bottom:0.5rem;
 }
 .price-val{
-  font-family:var(--font);font-size:1.8rem;
+  font-family:var(--font);font-size:1.5rem;
   font-weight:800;color:var(--text);
 }
 .price-val.green{color:var(--accent)}
 .price-val.gold{color:var(--gold)}
 
-/* SECTIONS */
 .section{padding:5rem 2rem;max-width:1140px;margin:0 auto;position:relative;z-index:1}
 .section-tag{
   font-family:var(--mono);font-size:0.65rem;
@@ -202,7 +197,6 @@ nav{
 }
 .section-sub{color:var(--muted);font-size:1rem;max-width:560px;font-weight:300;line-height:1.7}
 
-/* DOMAIN VALUE */
 .value-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem;align-items:start}
 .value-copy h3{font-family:var(--font);font-size:1.6rem;font-weight:800;margin-bottom:1rem;letter-spacing:-0.5px}
 .value-copy p{color:var(--muted);font-weight:300;line-height:1.8;margin-bottom:1rem}
@@ -219,7 +213,6 @@ nav{
 }
 .vstat .l{font-size:0.75rem;color:var(--muted);margin-top:4px}
 
-/* COMPARABLE SALES */
 .table-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:5rem 2rem}
 .table-inner{max-width:1140px;margin:0 auto}
 .comp-table{width:100%;border-collapse:collapse;margin-top:2.5rem;font-size:0.88rem}
@@ -246,7 +239,6 @@ nav{
   animation:pulse 2s infinite;
 }
 
-/* WHY SPONSOR */
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2.5rem}
 .why-card{
   background:var(--bg2);border:1px solid var(--border);
@@ -273,7 +265,6 @@ nav{
   font-size:0.75rem;font-weight:600;margin-top:0.75rem;
 }
 
-/* VS SECTION */
 .vs-section{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:5rem 2rem}
 .vs-inner{max-width:1140px;margin:0 auto}
 .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem}
@@ -293,7 +284,6 @@ nav{
 .dig .vs-big{color:var(--accent)}
 .vs-big-label{font-size:0.75rem;color:var(--muted)}
 
-/* PACKAGES */
 .pkg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2.5rem}
 .pkg-card{
   background:var(--bg2);border:1px solid var(--border);
@@ -331,7 +321,6 @@ nav{
 .btn-pkg.outline{background:transparent;color:var(--text);border:1px solid var(--border)}
 .btn-pkg.outline:hover{border-color:var(--accent);color:var(--accent);background:rgba(0,245,196,0.05)}
 
-/* ROI */
 .roi-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem;align-items:start}
 .roi-calc{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:2rem}
 .roi-calc h3{font-family:var(--font);font-size:1.3rem;font-weight:800;margin-bottom:1.5rem}
@@ -348,7 +337,6 @@ nav{
 .roi-fact p{font-size:0.82rem;color:var(--muted);font-weight:300;line-height:1.6}
 .roi-source{font-family:var(--mono);font-size:0.6rem;color:rgba(107,122,153,0.6);margin-top:0.4rem;display:block}
 
-/* MARKETPLACES */
 .mkt-section{background:var(--bg2);border-top:1px solid var(--border);padding:5rem 2rem}
 .mkt-inner{max-width:1140px;margin:0 auto}
 .mkt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:2.5rem}
@@ -372,7 +360,6 @@ nav{
 }
 .mkt-card:hover .mkt-arrow{right:0.75rem}
 
-/* CONTACT */
 .contact-section{
   background:linear-gradient(135deg,#050c1a,#080f20);
   border-top:1px solid var(--border);
@@ -387,10 +374,10 @@ nav{
 .contact-inner{max-width:700px;margin:0 auto;position:relative;z-index:1}
 .contact-inner .section-title{margin-bottom:0.75rem}
 .contact-inner p{color:var(--muted);font-weight:300;margin-bottom:2.5rem}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:2.5rem}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2.5rem;max-width:520px;margin-left:auto;margin-right:auto}
 .c-opt{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:1.25rem}
 .c-lbl{font-family:var(--mono);font-size:0.6rem;letter-spacing:2px;color:var(--accent);text-transform:uppercase;margin-bottom:0.4rem}
-.c-val{font-family:var(--font);font-size:1.3rem;font-weight:800}
+.c-val{font-family:var(--font);font-size:1.1rem;font-weight:800}
 
 footer{
   background:#020408;border-top:1px solid var(--border);
@@ -414,18 +401,18 @@ footer a{color:var(--accent);text-decoration:none}
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">XBase<span>.org</span></a>
+  <a href="index.html" class="nav-logo">Xbase<span>.com</span></a>
   <a href="index.html" class="nav-back">← Back to Site</a>
 </nav>
 
-<!-- HERO -->
+<!-- HERO — domain price removed, only sponsor pricing visible -->
 <section class="hero">
   <div class="hero-badge">◆ PREMIUM DOMAIN · INVESTMENT GRADE · CATEGORY LEADER</div>
   <h1>
     Own The Future.
     <span class="line2">xbase.org</span>
   </h1>
-  <p class="hero-sub">A category-defining digital asset available for acquisition, strategic partnership, or sponsorship. The most powerful address in AI & Technology — yours to own.</p>
+  <p class="hero-sub">A category-defining digital asset available for acquisition, strategic partnership, or sponsorship. The most powerful address in Premium Digital Asset — yours to own.</p>
   <div class="hero-btns">
     <a href="#contact" class="btn-glow">🔥 Make an Offer</a>
     <a href="#sponsor" class="btn-glow btn-glow-gold">⚡ Become a Sponsor</a>
@@ -433,7 +420,7 @@ footer a{color:var(--accent);text-decoration:none}
   </div>
   <div class="price-bar">
     <div class="price-item featured">
-      <div class="price-label">Acquisition Price</div>
+      <div class="price-label">Acquisition</div>
       <div class="price-val green">Make an Offer</div>
     </div>
     <div class="price-item">
@@ -442,11 +429,11 @@ footer a{color:var(--accent);text-decoration:none}
     </div>
     <div class="price-item">
       <div class="price-label">Sponsorship From</div>
-      <div class="price-val">Inquire</div>
+      <div class="price-val">$299/mo</div>
     </div>
     <div class="price-item">
       <div class="price-label">Response Time</div>
-      <div class="price-val" style="font-size:1.2rem">Under 24hrs</div>
+      <div class="price-val" style="font-size:1.1rem">Under 24hrs</div>
     </div>
   </div>
 </section>
@@ -457,7 +444,7 @@ footer a{color:var(--accent);text-decoration:none}
   <h2 class="section-title">Why xbase.org Is Worth Every Dollar</h2>
   <div class="value-grid">
     <div class="value-copy">
-      <h3>The Most Powerful Address in AI & Technology</h3>
+      <h3>The Most Powerful Address in Premium Digital Asset</h3>
       <p>xbase.org is not just a domain — it is a category-defining digital asset commanding instant authority, trust, and recognition. Premium domains reduce Customer Acquisition Cost (CAC) by up to 67% compared to generic branded domains because they carry inherent search intent and brand recall.</p>
       <p>When a business owns xbase.org, they own the conversation. Every email from @xbase.org, every backlink earned, and every direct visitor builds compounding brand equity that no advertising budget can replicate.</p>
       <p>Premium one and two-word domains have appreciated 1,200%+ over the past decade — outperforming traditional real estate, stocks, and bonds as an asset class.</p>
@@ -471,7 +458,7 @@ footer a{color:var(--accent);text-decoration:none}
   </div>
 </section>
 
-<!-- COMPARABLE SALES -->
+<!-- COMPARABLE SALES — xbase.org row updated, no price -->
 <section class="table-section">
   <div class="table-inner">
     <div class="section-tag">02 — MARKET COMPARABLES</div>
@@ -492,7 +479,7 @@ footer a{color:var(--accent);text-decoration:none}
           <td><strong>xbase.org</strong></td>
           <td><strong style="color:var(--accent)">Make an Offer</strong></td>
           <td>2026</td>
-          <td>AI & Technology</td>
+          <td>Premium Digital Asset</td>
           <td><span class="badge-sale">FOR SALE</span></td>
         </tr>
         <tr><td>voice.com</td><td>$30,000,000</td><td>2019</td><td>Technology</td><td><span class="badge-sold">SOLD</span></td></tr>
@@ -516,7 +503,7 @@ footer a{color:var(--accent);text-decoration:none}
     <div class="why-card">
       <div class="why-num">01</div>
       <h4>100% Targeted — Zero Waste</h4>
-      <p>Every visitor is actively interested in AI & Technology. Traditional TV reaches 95% irrelevant audiences. Here, every impression is an in-market buyer.</p>
+      <p>Every visitor is actively interested in Premium Digital Asset. Traditional TV reaches 95% irrelevant audiences. Here, every impression is an in-market buyer.</p>
       <span class="why-stat">94% Audience Relevance</span>
     </div>
     <div class="why-card">
@@ -540,7 +527,7 @@ footer a{color:var(--accent);text-decoration:none}
     <div class="why-card">
       <div class="why-num">05</div>
       <h4>Permanent Brand Authority</h4>
-      <p>Association with xbase.org permanently elevates brand perception in AI & Technology. Category authority transfers to your brand the moment you sponsor.</p>
+      <p>Association with xbase.org permanently elevates brand perception in Premium Digital Asset. Category authority transfers to your brand the moment you sponsor.</p>
       <span class="why-stat">Category Authority Transfer</span>
     </div>
     <div class="why-card">
@@ -581,7 +568,7 @@ footer a{color:var(--accent);text-decoration:none}
         <ul class="vs-list">
           <li>From $299/month — 99% less than TV</li>
           <li>Global reach across 180+ countries instantly</li>
-          <li>100% AI & Technology professionals — zero waste</li>
+          <li>100% Premium Digital Asset professionals — zero waste</li>
           <li>Real-time analytics, clicks, conversions tracked</li>
           <li>Newsletter + content + social — multi-channel</li>
           <li>Permanent SEO backlink value included</li>
@@ -595,7 +582,7 @@ footer a{color:var(--accent);text-decoration:none}
   </div>
 </section>
 
-<!-- PACKAGES -->
+<!-- PACKAGES — SPONSORSHIP PRICES INTACT (these are products, not domain prices) -->
 <section class="section" id="packages">
   <div class="section-tag">05 — PACKAGES</div>
   <h2 class="section-title">Sponsorship & Partnership Packages</h2>
@@ -706,7 +693,7 @@ footer a{color:var(--accent);text-decoration:none}
   <div class="mkt-inner">
     <div class="section-tag">07 — ACQUIRE NOW</div>
     <h2 class="section-title">Buy xbase.org — 5 Marketplaces</h2>
-    <p class="section-sub">Purchase through our preferred partner Web.Works or any verified marketplace. All transfers secured via Escrow.com.</p>
+    <p class="section-sub">Purchase through our preferred partner Web.Works or any verified marketplace. All transfers secured via Escrow.com. Pricing available on inquiry through any partner below.</p>
     <div class="mkt-grid">
       <a href="https://web.works/services" target="_blank" rel="noopener" class="mkt-card primary">
         <div class="mkt-num">01 · PREFERRED PARTNER</div>
@@ -742,15 +729,14 @@ footer a{color:var(--accent);text-decoration:none}
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT — domain prices removed, only response time + sponsor info kept -->
 <section class="contact-section" id="contact">
   <div class="contact-inner">
     <div class="section-tag" style="justify-content:center">08 — CONTACT</div>
     <h2 class="section-title">Ready to Acquire xbase.org?</h2>
-    <p>Purchase outright, lease monthly, or start a sponsorship — we respond within 24 hours. All transfers via Escrow.com.</p>
+    <p>Purchase outright, lease monthly, or start a sponsorship — pricing disclosed under NDA. We respond within 24 hours. All transfers via Escrow.com.</p>
     <div class="contact-grid">
       <div class="c-opt"><div class="c-lbl">Acquisition</div><div class="c-val">Make an Offer</div></div>
-      <div class="c-opt"><div class="c-lbl">Monthly Lease</div><div class="c-val">Inquire</div></div>
       <div class="c-opt"><div class="c-lbl">Response Time</div><div class="c-val">Under 24hrs</div></div>
     </div>
     <a href="mailto:acquire@xbase.org" class="btn-glow" style="font-size:1rem;padding:1.1rem 3rem">
